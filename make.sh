@@ -34,6 +34,8 @@ then
 	XFOILFILES="xfoil.exe pxplot.exe pplot.exe Xfoil699src.zip"
 	XFOILARC="XFOIL6.99.zip"
 	ARCCOM="unzip -o"
+#FIXME
+#Support for Linux is NOT complete.
 elif [ `uname -o` = "GNU/Linux" ]
 then
 	XFOILURL="http://web.mit.edu/drela/Public/web/xfoil/xfoil6.99.tgz"
@@ -53,6 +55,7 @@ then
 		cd -
 	fi
 else
+	mkdir -p $XFOILDIR	
 	cd $XFOILDIR
 	for file in $XFOILFILES
 	do 
